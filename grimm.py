@@ -15,7 +15,7 @@ mqtt_host = os.getenv("MQTT_HOST", "localhost")
 mqtt_port = int(os.getenv("MQTT_PORT", 1883))
 mqtt_user = os.getenv("MQTT_USER")
 mqtt_pass = os.getenv("MQTT_PASS")
-mqtt_topic = os.getenv("MQTT_TOPIC", "opc/test")
+mqtt_topic = os.getenv("MQTT_TOPIC")
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 

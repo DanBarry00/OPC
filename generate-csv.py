@@ -31,7 +31,7 @@ def on_connect(client, userdata, connect_flags, reason_code, properties):
         print(f"Failed to connect: {reason_code}")
         return
     
-    mqtt_topic = os.getenv("MQTT_TOPIC", "opc/test")
+    mqtt_topic = os.getenv("MQTT_TOPIC")
     print(f"Connected to {os.getenv('MQTT_HOST')}:{os.getenv('MQTT_PORT')}")
     client.subscribe(mqtt_topic)
     print(f"Subscribed to {mqtt_topic}")

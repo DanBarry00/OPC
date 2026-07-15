@@ -16,10 +16,10 @@ mqtt_host = os.getenv("MQTT_HOST", "localhost")
 mqtt_port = int(os.getenv("MQTT_PORT", 1883))
 mqtt_user = os.getenv("MQTT_USER")
 mqtt_pass = os.getenv("MQTT_PASS")
-mqtt_topic = os.getenv("MQTT_TOPIC", "opc/test")
+mqtt_topic = os.getenv("MQTT_TOPIC")
 
 SENSOR_NAME = "pms1003"
-SERIAL_PORT = os.getenv("PMS1003_PORT", "/dev/pms1003")
+SERIAL_PORT = "/dev/sensor_3_3"
 
 
 def on_connect(client, userdata, connect_flags, reason_code, properties):

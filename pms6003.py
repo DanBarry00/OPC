@@ -16,7 +16,7 @@ mqtt_host = os.getenv("MQTT_HOST", "localhost")
 mqtt_port = int(os.getenv("MQTT_PORT", 1883))
 mqtt_user = os.getenv("MQTT_USER")
 mqtt_pass = os.getenv("MQTT_PASS")
-mqtt_topic = os.getenv("MQTT_TOPIC", "opc/test")
+mqtt_topic = os.getenv("MQTT_TOPIC")
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 
@@ -31,7 +31,7 @@ def on_connect(client, userdata, connect_flags, reason_code, properties):
 
 client.on_connect = on_connect
 
-PORT = "/dev/pms6003"
+PORT = "/dev/sensor_3_1"
 
 ser = serial.Serial(PORT, 9600, timeout=2)
 
